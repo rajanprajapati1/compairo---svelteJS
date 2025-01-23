@@ -31,3 +31,25 @@ export function mapDomainToValue(domain) {
         return 0;
     }
 }
+
+export function formatProductData(product) {
+    const details = product?.detail
+        .map((item) => `${item?.key}: ${item?.value}`)
+        .join("; ");
+
+    return `Title: ${product?.title}, Price: ${product?.price}, Discount: ${product?.discount}, ImageUrl: ${product?.imageUrl}, Details: { ${details} }`;
+}
+
+export function parseJsonResponse(jsonString) {
+    try {
+        const jsonStart = jsonString.indexOf('{');
+        const jsonEnd = jsonString.lastIndexOf('}') + 1;
+        const jsonPart = jsonString.substring(jsonStart, jsonEnd);
+
+        const responseObject = JSON.parse(jsonPart);
+        return responseObject;
+    } catch (error) {
+        console.error("Error parsing JSON:", error);
+        return null;
+    }
+}
