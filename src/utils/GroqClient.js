@@ -1,11 +1,11 @@
 import Groq from "groq-sdk";
 
 const groq1 = new Groq({
-  apiKey:
+  apiKey: `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` || `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`,
 });
 
 const groq = new Groq({
-    apiKey:
+    apiKey: `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`,
   });
   
 export const GroqClient = async (content) => {
