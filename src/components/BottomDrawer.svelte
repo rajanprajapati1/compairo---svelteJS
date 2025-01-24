@@ -30,8 +30,8 @@
   } text-white overflow-hidden`}
 >
   {#if IsDrawerShow}
-      <div transition:fade="{{ duration: 300 }}" class="flex flex-col h-full">
-          <button on:click={onClose} class="text-xl  font-bold mb-4 text-center flex items-center justify-center gap-2">Product Comparison 
+        <div transition:fade="{{ duration: 300 }}" class="flex flex-col h-full">
+          <button on:click={onClose} class="text-xl active:translate-y-1 transition duration-75 ease-in  font-bold mb-4 text-center flex items-center justify-center gap-2">Product Comparison 
             <ChevronDown />
           </button>
           <div class="flex-grow overflow-y-auto space-y-6">
