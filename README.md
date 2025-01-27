@@ -37,11 +37,3 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-
-
-
-curl -X POST -H "Content-Type: application/json" -d '{"apiKey": "b625dab6db6326c368dfadf0c8926585", "url": "http://httpbin.org/ip"}' "https://async.scraperapi.com/jobs"
-
-b625dab6db6326c368dfadf0c8926585
-
-curl "http://api.scraperapi.com?api_key=b625dab6db6326c368dfadf0c8926585&url=http://httpbin.org/ip"
